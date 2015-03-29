@@ -1,0 +1,144 @@
+.contact-me {
+  height: 300px;
+  width: 200px;
+  background-color: #b2b1b8;
+  position: relative;
+  top: -22em;
+  left: 50em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#my-pic {
+  background-color: #b2b1b8;
+  width: 15%;
+}
+
+#alex {
+  position: relative;
+  left: 2em;
+  top: 2em;
+  width: 200px;
+  height: 240px;
+}
+
+.navbar {
+  position: relative;
+  right: -1em;
+  top: -250px;
+  font-family: 'Railway', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  height: 17vh;
+  width: 75%;
+  padding-left: 2em;
+  padding-top: 80px;
+  padding-bottom: 1em;
+  margin-left: 7em;
+  background-color: #b2b1b8;
+}
+
+.nav-link-1 {
+  width: 275px;
+  height: 120px;
+  padding-top: 2em;
+  margin-top: -2em;
+  text-align: center;
+  margin-left: -1em;
+  background-color: #35B0ff;
+  text-decoration: none;
+}
+
+.nav-link-1:hover {
+  background-color: #2f79e0
+}
+
+.nav-link-2 {
+  margin-left: 8em;
+  margin-top: -190px;
+  padding-top: 2em;
+  width: 275px;
+  height: 120px;
+  text-align: center;
+  background-color: #35B0ff;
+}
+
+.nav-link-2:hover {
+  background-color: #2f79e0;
+}
+
+.nav-link-3 {
+  margin-right: -200px;
+  margin-left: 17em;
+  margin-bottom: 4em;
+  margin-top: -190px;
+  padding-top: 2em;
+  height: 120px;
+  width: 275px;
+  background-color: #35B0ff;
+  text-align: center;
+}
+
+.nav-link-3:hover {
+  background-color: #2f79e0;
+}
+
+table {
+  font-family: 'Railway', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  position: relative;
+  left: 250px;
+  top: -220px;
+}
+
+th {
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  padding-left: 5em;
+  padding-right: 7em;
+  padding-bottom: 1em;
+}
+
+td {
+  font-size: 20px;
+}
+
+h1 {
+  font-family: 'Railway', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  position: relative;
+  top: -2em;
+  left: 250px;
+}
+
+h2 {
+  font-family: 'Railway', sans-serif;
+  font-weight: 400;
+  position: relative;
+  left: 250px;
+  top:-10em;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+#github-icon {
+  margin-left: 3em;
+}
+
+body {
+  color: black;
+  background-color: #b2b1b8;
+  max-width: 500px;
+  max-height: 100vh;
+}
