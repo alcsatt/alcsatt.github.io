@@ -1,0 +1,38 @@
+h1 {
+  background-color: black;
+  font-family: 'Railway', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  height: 11vh;
+  padding-top: 1em;
+}
+
+h2 {
+  text-align: center;
+  background-color: #35b0ff;
+  font-family: 'Railway', sans-serif;
+  font-weight: 400;
+  height: 6vh;
+  padding-top: 1em;
+  width: 50%;
+  margin-left: 5em;
+}
+
+h4 {
+  font-family: 'Railway', sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  padding-left: 3em;
+}
+
+p {
+  font-family: 'Railway', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  padding-top: 1em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
