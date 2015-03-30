@@ -95,16 +95,33 @@ table {
   top: -220px;
 }
 
+#tech {
+  padding-right: 2em;
+}
+
+#personal {
+  position: relative;
+  padding-left: 2em;
+  left: 700px;
+  top: -400px;
+}
+
+#personal-row-1 {
+  position: relative;
+  padding-left: 2em;
+  left: 300px;
+}
+
 th {
   width: 250px;
   height: 100px;
-  text-align: center;
   padding-left: 5em;
-  padding-right: 7em;
+  padding-right: 3em;
   padding-bottom: 1em;
 }
 
 td {
+  padding-right: 3em;
   font-size: 20px;
 }
 
