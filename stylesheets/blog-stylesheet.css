@@ -36,3 +36,9 @@ p {
   padding-right: 5em;
 }
 
+.codeblock {
+  position: relative;
+  left: -100px;
+  text-align: center;
+}
+

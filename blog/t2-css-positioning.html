@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+  <title>Tech Talk with ASatt</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,100,200' rel='stylesheet' type='text/css'>
+</head>
+
+<main>
+  <h1>CSS Positioning</h1>
+  <h2>Differences between Relative, Absolute and Fixed</h2>
+  <h4><em>March 29, 2015</em></h4>
+
+  <section>
+    <p>
+      CSS positioning plays a crucial role in the overall look and feel of a webpage. As you continue
+      to add content to your website, knowing how to tell that content where to sit on the page is a
+      very useful skill!
+    </p>
+    <p>
+        The standard behavior for HTML content (without applying any CSS) is to flow lower down the
+        page. If you add one HTML block (let's say it's just a paragraph), then you add another one
+        below it in the code -- that's exactly how the paragraphs will appear on the webpage. The
+        paragraph you wrote first will appear higher on the page.
+    </p>
+    <p>
+        <b>Relative Positioning</b> allows you to shift the element around (by adjusting the top,
+        right, bottom or left attribute in CSS) to a different area than where it would have been if
+        you had kept the normal flow. Since you can specify that you want to use relative positioning
+        for a specific element, it does not affect the position of the other elements.
+        For example, let's say that I want to shift a paragraph over to the right from where it would
+        have been originally. All I have to do is add the following to the CSS file I have linked:
+
+        <div class="codeblock"><p><code>p {</code></p>
+        <pre><code>                           position: relative;
+                  left: 2em;
+    }</code></pre></div>
+    </p>
+    <p>
+        <b>Absolute Positioning</b> allows you to take an element out of its normal flow. An element
+        is positioned in relation to it's containing element (let's say it's a h1 header):
+
+        <div class="codeblock"><p><code>h1 {</code></p>
+        <pre><code>                           position: absolute;
+                  left: 2em;
+                 top: 0px;
+                     width: 200px;
+    }</code></pre></div>
+    <p>
+      The above sample code sets the position of the h1 element to absolute and moves it 2em from the left
+      side of the page. It sits at the very top of the page and is 200 pixels wide.
+    </p>
+    <p>
+        <b>Fixed Positioning</b> allows you to take an element out of its normal flow. The positioning
+        is done in relation to the browser window itself. Have you
+        ever wanted to create one of those navigation bars on the side of the page that stays in the
+        same position now matter how much you scroll around? That's exactly what setting the position
+        attribute to fixed does. All of the other elements behave as if that element is not even
+        there. They ignore the space the element would have taken up. If set the position attribute to
+        fixed in the code above, then that header would move all the way down the page with you -- no
+        matter where you went!
+    </p>
+  </section>
+</main>
+
