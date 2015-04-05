@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <title>Tech Talk With ASatt</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,100,200' rel='stylesheet' type='text/css'>
+</head>
+
+<main>
+  <h1>Arrays and Hashes</h1>
+  <h2>What Are They?</h2>
+  <h4><em>April 5, 2015</em></h4>
+
+  <section>
+    <p>
+      <b>Arrays</b> are like ordered lists. Each entry can be referenced by a number (also called
+      an <em>index</em>). The actual value at each entry is up to you. It can be simple like a grocery
+      list:
+      <p><code>grocery_list = ["eggs", "milk", "vegetables", "fruits"]</code></p>
+      <p>They can contain numbers or even other arrays as their entries. Instead of something general
+        like "fruits" or "vegetables", I could have chosen to make those sub-lists within my larger
+        grocery list:
+        <p><code>grocery_list = ["eggs", "milk", ["carrots", "peas", "green beans"], ["apples,
+          oranges, bananas"]]</p>
+          <p> Let's say that you didn't want to have to scan through the entire list to find something.
+            You just want to know what the second entry is. Here is how you would access it:
+            <p><code>grocery_list[1] #this would give you "milk"</code></p>
+            <p>You may be wondering why I didn't use "2" for the index to get the second entry. This
+              is a great question. It's important to note that the indexes of arrays start with zero.
+              That means the first entry is:
+              <p><code>grocery_list[0]</code></p>
+          <p>You can even choose to start from the last entry in the list:
+            <code>grocery_list[-1]</code>
+        <p>Once you have a much longer list -- you can do really cool things like printing out the
+          whole thing. Imagine you have a list of numbers, but you realized that as you were typing
+          it out you were off by one on each and every one of them. You might think that's not a big
+          deal because I can just start over. What if it was a list of a hundred numbers? A thousand?
+          Wouldn't you rather just do something like this?
+          <p><code>my_huge_list_of_numbers.map{ |number| number + 1}</code></p>
+          <p>Now all your numbers have been adjusted!
+    </p>
+    <p>
+        You can think of a <b>hash</b> as a dictionary. What's one of the distinguishing factors of a
+        dictionary? You look up a keyword and you get a definition or value for that keyword. That's
+        exactly what you can do with hashes. Let's say you wanted to keep track of a bunch of contact
+        information about someone. Sure, you could do it in an array. Would you really want to
+        remember that their hometown is the fourth entry or their birthday is the fifth entry?
+        Wouldn't it be easier if you could just ask your program what hometown this person is from
+        and you could get that value? I sure would! Let's see how we can do that with a hash:
+        <p>
+        <code>contact_info {</code><br/>
+        <code>&nbsp;:first_name => "John",</code><br/>
+        <code>&nbsp;:middle_name => "Albert",</code><br/>
+        <code>&nbsp;:last_name => "Doe",</code><br/>
+        <code>&nbsp;:hometown => "Miami",</code><br/>
+        <code>&nbsp;:birthday => "January 5, 1990",</code><br/>
+        <code>&nbsp;:age => 25</code><br/>
+        <code>}</code></p>
+        <p>Now when you want to access the person's hometown you can just say <code>contact_info[:hometown]</code> and you'll get "Miami". Hashes, in my opinion, provide a far more
+          organized way to look at you data. I always prefer remembering the keys because they make
+          more logical sense (the programmer has the ability to define them). As a result, looking
+          up data is far more intuitive.
+    </p>
+    <p>
+        I have only touched on these concepts and their uses. I hope that you feel even a little more
+        confident about the similarities and differences between these two containers after reading
+        this. There is far more that you can do with both of them!
+    </p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+
