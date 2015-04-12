@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <title>Tech Talk with ASatt</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,100,200' rel='stylesheet' type='text/css'>
+</head>
+
+<main>
+  <h1>Going Cycling</h1>
+  <h2>How the #cycle method works</h2>
+  <h4><em>April 12, 2015</em></h4>
+
+  <section>
+    <p>
+      I've decided to try and explain a method that I've never personally used before. Even reading
+      through the Ruby documentation, I'm trying to think about how this particular method would be
+      useful. The <b>#cycle</b> method iterates through a collection infinitely when nothing is
+      passed in as a parameter. However, when you pass in a integer, the #cycle method iterates through
+      the collection that number of times. Let's say we have an array:
+
+      <p><code>names = ["Alex", "Ben", "John", "Ralph"]</code></p>
+
+      <p>If we say <code>names.cycle(2) {|name| puts name }</code> that would print out the following:
+        <br/><br/>Alex<br/>Ben<br/>John<br/>Ralph<br/>Alex<br/>Ben<br/>John<br/>Ralph<br/>
+      <p>You might wonder what this is useful for. I was thinking the same thing. Let's say you wanted to
+      create a flashcard application for yourself. Almost everyone has used flashcards to quiz themselves
+      at some point in their life. We might use the #cycle method to go through an entire collection of
+      flashcards the number of times that we actually want to quiz ourselves so we can commit all the
+      material to memory. To more properly simulate what this might be like, we can actually store an
+      Enumerator in a variable:<br/><br/>
+      <code>cycle_enum = names.cycle</code><br/><br/>
+      Now, when we want to move on to the next element in the collection, all we need to do is call
+      the enumerator's #next method:<br/><br/>
+      <code>cycle_enum.next</code> #this would give us "Alex"
+    </p>
+    <p>
+        Hopefully, this gives you some insight in to how this method works and why it can be useful!
+    </p>
+    <p>
+        <!-- more text -->
+    </p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+
