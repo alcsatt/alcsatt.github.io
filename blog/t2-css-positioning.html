@@ -31,25 +31,27 @@
         For example, let's say that I want to shift a paragraph over to the right from where it would
         have been originally. All I have to do is add the following to the CSS file I have linked:
 
-        <div class="codeblock"><p><code>p {</code></p>
-        <pre><code>                           position: relative;
-                  left: 2em;
-    }</code></pre></div>
-    </p>
+    <xmp>
+      p {
+        position: relative;
+        left: 2em;
+      }
+    </xmp>
     <p>
         <b>Absolute Positioning</b> allows you to take an element out of its normal flow. An element
         is positioned in relation to it's containing element (let's say it's a h1 header):
 
-        <div class="codeblock"><p><code>h1 {</code></p>
-        <pre><code>                           position: absolute;
-                  left: 2em;
-                 top: 0px;
-                     width: 200px;
-    }</code></pre></div>
+    <xmp>
+      h1 {
+        position: absolute;
+        left: 2em;
+        top: 0px;
+        width: 200px;
+      }
+    </xmp>
     <p>
       The above sample code sets the position of the h1 element to absolute and moves it 2em from the left
       side of the page. It sits at the very top of the page and is 200 pixels wide.
-    </p>
     <p>
         <b>Fixed Positioning</b> allows you to take an element out of its normal flow. The positioning
         is done in relation to the browser window itself. Have you
