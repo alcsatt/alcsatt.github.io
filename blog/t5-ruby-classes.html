@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+  <title>Tech Talk with ASatt</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,100,200' rel='stylesheet' type='text/css'>
+</head>
+
+<main>
+  <h1>Tennis</h1>
+  <h2>Ruby Classes</h2>
+  <h4><em>April 16, 2015</em></h4>
+
+  <section>
+    <p>
+      For this week's entry, we'll be getting in to classes in Ruby. This is perhaps one of the most
+      important basic concepts for a novice programmer to understand. Classes allow you to model objects
+      or processes from the real world. In technical terms, we say that a class encapsulates information
+      and behavior about an object. A very generic example is so say that we have a class to represent
+      a person. It might look something like this:<br/>
+      <xmp>
+        class Person
+          attr_accessor :name, :age, :birthplace
+
+          def initialize(name, age, birthplace)
+            @name = name
+            @age = age
+            @birthplace = birthplace
+          end
+
+          def print_info
+            puts "Name: #{@name}"
+            puts "Age: #{@age}"
+            puts "Birthplace: #{@birthplace}"
+          end
+        end
+
+        alex = new Person("Alex", 26, "Houston, TX")
+        erica = new Person("Erica", 32, "Seattle, WA")
+      </xmp>
+    <p>
+      As you can see above, this type of construction allows me to create multiple person variables to
+      represent different people. This is a powerful concept because that's exactly the way the real
+      world is. Everyone is different. If I called the #print_info method on the alex object, the
+      output on the screen would look like this:
+      <xmp>
+        Name: Alex
+        Age: 26
+        Birthplace: Houston, TX
+      </xmp>
+      <p>
+      Similarly, if I called that same method on the erica object, I would get her information. This is
+      all great, but I want to model something that is a little more complicated. Another passion of
+      mine since I was about twelve years hold has been tennis. Anyone who has played or has tried to play
+      will tell you that the scoring is not the easiest or most intuitive thing in the world. If I
+      started to get in to all of it, this post would turn in to a novel. I will just be modeling what
+      happens on in one GAME (trust me, it's not what you think). If you want to read more about scoring,
+      you can go <a href="http://en.wikipedia.org/wiki/Tennis#Scoring">here.</a> To model the scoring
+      in one game, I might end up with a class that looks like this:
+      <xmp>
+        class TennisGame
+
+          def initialize(player1, player2)
+            @player1 = player1              #this will be a name
+            @player2 = player2
+            @p1_pts = 0                     #this will be points won
+            @p2_pts = 0
+            @scores = ["Love", "15", "30", "40"]
+          end
+
+          def award_point(player)
+            player == @player1? @p1_pts += 1: @p2_pts += 1
+          end
+
+          def score
+            if (@p1_pts < 4 and @p2_pts < 4) and (@p1_pts + @p2_pts < 6)
+              @p1_pts == @p2_pts? @scores[@p1_pts] + " All": @scores[@p1_pts] + " " + @scores[@p2_pts]
+            else
+              if (@p1_pts == @p2_pts)
+                "Deuce"
+              else
+                name_to_call = @p1_pts > @p2_pts? @player1: @player2
+                (@p1_pts - @p2_pts).abs == 1? "Advantage " + name_to_call: "Game " + name_to_call
+              end
+            end
+          end
+
+        end
+      </xmp>
+    <p>
+      As you can see, scoring is not an easy thing to keep track of in tennis. After writing this
+      class though, I won't have to worry about it. The code will keep track of it for me. All I need
+      to do is know the player names and call the #point method every with that name as an argument
+      every time I want to award a point to that player. Then, when I call the #score method, I'll
+      always know the current score in tennis terminology. The best thing about it is that it's
+      repeatable and sustainable now matter who is playing the game.
+    <p>
+      Hopefully this provided you with some insight as to how classes can be useful to model real
+      world objects and behaviors. This could get more complicated if I wanted to actually use
+      classes for the players themselves or try to model an entire tennis match to include the game
+      score, the set score and the match score. This was merely an initial attempt aimed at showing
+      how just a few lines of code inside a class are useful.
+    </p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+

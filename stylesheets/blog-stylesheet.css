@@ -33,7 +33,7 @@ p {
   font-size: 15px;
   padding-top: 1em;
   padding-left: 5em;
-  padding-right: 5em;
+  padding-right: 35%;
 }
 
 ul {
@@ -49,5 +49,9 @@ ul {
   position: relative;
   left: -100px;
   text-align: center;
+}
+
+xmp {
+  padding-left: 5em;
 }
 
