@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+  <title>Tech Talk with ASatt</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,100,200' rel='stylesheet' type='text/css'>
+</head>
+
+<main>
+  <h1>Variable Scope</h1>
+  <h2>Different Kinds and Where To Use Them</h2>
+  <h4><em>April 26, 2015</em></h4>
+
+  <section>
+    <p>
+      Variable scope is an important concept that every novice developer should learn. Today, I'll be
+      talking about this concept as it applies to Ruby. There are five different types of variables in
+      Ruby. Global variables (which start with $), class variables (which start with @@), instance
+      variables (which start with @), local variables and constants.
+    </p>
+    <p>
+      <b>Global</b> variables can be seen and altered by anything and anyone. It is usually not
+      recommended to use this type of variable as it could produce unintended side effects as your
+      code base grows. For the sake of completeness, it's still good to know what they are in case you
+      ever encounter one: <br/>
+      <xmp>
+        $i_am_a_global_variable = 42
+
+        class SomeClass
+          def do_something
+            $i_am_a_global_variable = 12
+          end
+        end
+
+        class AnotherClass
+          def print_fourty_two
+            puts "I love the number #{$i_am_a_global_variable}."
+          end
+        end
+
+        someclass = SomeClass.new
+        someclass.do_something  # did we mean to do that?
+
+        anotherclass = AnotherClass.new
+        anotherclass.print_fourty_two   #uhhhhh this didn't print 42
+      </xmp>
+    <p>
+    As you can see, using a global variable may have unintended consequences. We wrote a method expecting
+    it to print 42, but we instead got 12 because our first class altered the variable's value.
+    <p>
+        <b>Class</b> variables are useful because they can be shared across all instances of a class.
+        Let's say we wanted to keep track of the number of cars in our inventory. We could do that
+        with a class variable: <br/>
+
+        <xmp>
+          class Car
+            @@car_count = 0
+            MAKE = "Honda"
+            def initialize(model, year)
+              @model = model
+              @year = year
+            end
+
+            def total_count
+              @@car_count += 1
+              total_msg = "We have #{@@car_count} car(s)."
+            end
+          end
+
+          car1 = Car.new("Accord", 2004)
+          car2 = Car.new("CR-V", 2010)
+
+          car1.total_count  # "We have 1 car(s)."
+          car2.total_count  # "We have 2 car(s)."
+        </xmp>
+    <p>
+      We have our class variable called car_count which gets incremented every time we call the
+      total count method.
+    <p>
+      <b>Instance</b> variables are very common. They are unique to the instance of that class. This
+      is useful for keeping track of specific information about an object. In the above example, model
+      and year are both instance variables. If we printed them out for our car1 object, we would get
+      "Accord" and "2004". Similarly, if we printed them out for our car2 object, we would get "CR-V"
+      and "2010".
+    <p>
+      <b>Local</b> variables are also quite common. They begin with a lowercase letter or an underscore.
+      The actual scope of a local variable can be anywhere from a module all the way down to a block.
+      In the above example, the local variable (although not really needed) total_msg is local to the
+      total_count method inside the Car class. In other words, I cannot manipulate or reference that
+      variable anywhere but inside that method.
+    <p>
+      <b>Constants</b> by begin with an uppercase letter, but are usually in all caps by convention.
+      They can be defined inside a class (or module). After that, altering the value of that constant
+      will give you a warning. Constants must also be initialized with a value or you will receive
+      an error. In the above example, I created a constant MAKE to show that we're at a Honda
+      dealership. There is no need to ever have the MAKE variable be anything else. If I wanted to
+      make the Car class a little more generic, I could have a make instance variable that I could set
+      upon creation of a car object.
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+
