@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <title>Tech Talk with ASatt</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,100,200' rel='stylesheet' type='text/css'>
+</head>
+
+<main>
+  <h1>JavaScript vs. Ruby</h1>
+  <h2>Objects and Hashes</h2>
+  <h4><em>May 3, 2015</em></h4>
+
+  <section>
+    <p>
+      Although there are many similarities and differences between JavaScript and Ruby, I'm going to focus on
+      one such comparison today: JavaScript objects versus Ruby hashes. Let's first examine how they are
+      both created:<br/>
+      <xmp>
+        // JAVASCRIPT
+          var jsObj = {}
+        //
+
+        # RUBY
+          ruby_hash = {}  # Hash.new also works
+        #
+      </xmp>
+    <p>
+      Hmmm, that's not very helpful. They look the same. The only reason we can really tell what they are is
+      because JavaScript has the <b>var</b> keyword while Ruby doesn't. There are also variable naming
+      conventions in both languages that help to distinguish them. To continue our analysis, let's add some
+      data. We could have just created both with data to begin with, or we could add some later:<br/>
+      <xmp>
+        // JAVASCRIPT
+          var jsObj = {
+            language: "JavaScript",
+            age: 20
+          }
+          jsObj.creator = "Brendan Eich"
+
+        # RUBY
+          ruby_hash = {
+            :language => "Ruby",
+            :age => 20
+          }
+          ruby_hash[:creator] = "Yukihiro Matsumoto"
+      </xmp>
+    <p>
+      Now we can at least see a couple differences. The pairs within JavaScript objects are called
+      <b>properties</b> and <b>values</b>. The pairs within Ruby hashes are called <b>keys</b> and
+      <b>values</b>. They may have slightly different syntaxes with regard to how they store data,
+      but for our purposes as beginners, they are used for very similar reasons. They can group data
+      together in a very efficient and organized manner. Instead of creating a list or
+      individual objects with all this information, I can create one object (or hash) and store the values. I
+      can then use the properties or keys to look up the data and/or change it later.
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+
