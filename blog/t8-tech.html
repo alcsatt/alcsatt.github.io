@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <title>Tech Talk with ASatt</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,100,200' rel='stylesheet' type='text/css'>
+</head>
+
+<main>
+  <h1>NoSQL Databases</h1>
+  <h2>Adapting to Keep Up with Modern Applications</h2>
+  <h4><em>May 10, 2015</em></h4>
+
+  <section>
+    <p>
+      SQL databases and NoSQL databases both have their trade-offs, but this post is intended to at least
+      provide a high level understanding of what a NoSQL database is. SQL databases were developed in the
+      1970s while NoSQL databases were developed in the 2000s. You may have guessed just by reading that
+      last sentence that there were very different needs at the time of their development so there are bound
+      to be differences in design. You're absolutely correct.
+    <p>
+      The real advantage of NoSQL databases comes from their ability to handle large volumes of data and
+      data manipulation very efficiently. They were developed with modern applications in mind and take
+      advantage of the cheap storage and vast processing power. They scale "horizontally" which basically
+      means that when you have too much data and you want to expand -- you add servers instead of adding
+      more resources to a single server. They usually support something called auto-sharding which means
+      that they inherently know how to spread data across several servers. Load balancers automatically
+      distribute the data and queries so as to not unfairly burden individual servers with a lot of work.
+      It also provides another failsafe because if a server crashes, you still have the remaining servers
+      that can continue to support your application.
+    <p>
+      Again this is just meant as an introduction. Let's go over some of the differences between SQL databases
+      and NoSQL databases. There are several different types of NoSQL databases (key-value stores, document
+      databases, wide-column stores and graph databases) whereas there is just on type of SQL database. SQL
+      databases use tables, rows and columns to store information about entities. You then need to join the
+      tables together to acquire more complex datasets. NoSQL databases store their information in different
+      ways depending on their type. Key-values stores use (you guessed it) two columns -- a key and a value.
+      Document databases (such as MongoDB) store all relevant data together in something called a "document."
+      The advantage here is that this approach is not dependent on a schema. This means that you can store
+      data with different structures together (unlike rows in SQL databases which adhere to a template). The
+      documents can also be stored in JSON or another useful format that is in prominent use for modern web
+      applications. As I mentioned in the previous paragraph, SQL databases scale vertically. This means that
+      you must keep adding resources on to a single server in order to accommodate increasing data demand. It
+      is not impossible to have them scale horizontally, but it requires a significant engineering committment.
+      NoSQL databases scale horizontally. You can add more servers or instances on the cloud and the data
+      automatically spreads and re-distributes to the new servers. The last difference I'll mention has to do
+      with actually manipulating the data. In SQL, you have to use a specific language (SELECT, INSERT, JOIN,
+      FROM, WHERE, etc...) to create queries that act on the data. In NoSQL databases, however, there are
+      object-oriented APIs which do this.
+    <p>
+      For further reading on this topic you can search for NoSQL databases online or check out
+      <a href="http://www.mongodb.com/nosql-explained">this</a> article.
+  </section>
+</main>
+
