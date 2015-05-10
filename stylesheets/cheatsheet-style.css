@@ -1,0 +1,39 @@
+.left {
+  float: left;
+  width: 45%;
+}
+
+.right {
+  float: right;
+  width: 45%;
+}
+
+body {
+  font-family: 'Railway', sans-serif;
+  font-weight: 300;
+}
+
+/*xmp {
+  background-color: ;
+}*/
+
+ul {
+  font-family: 'Railway', sans-serif;
+  font-weight: 300;
+}
+
+h3 {
+  background-color: #35b0ff;
+  width: 50%;
+  text-align: center;
+  font-family: 'Railway', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Railway', sans-serif;
+  font-weight: 700;
+}

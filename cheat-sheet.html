@@ -1,0 +1,92 @@
+
+<!-- DOCTYPE HTML-->
+<html>
+<head>
+  <title>Cheat Sheets</title>
+  <link type="text/css" rel="stylesheet" href="stylesheets/cheatsheet-style.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,100,200' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <h1>Cheat Sheet</h1>
+
+  <section>
+    <div class="sectionheader">
+    <h3>Ruby Loops VS. JavaScript Loops</h3>
+    <p>For loops are used when we need to iterate a specific number of times. This type of loop is not often
+      used in Ruby.
+     <br/>For each allows you to loops
+      through each item in a collection.<br/> While loops allow you to iterate while a certain condition or
+      conditions hold true. Once false, the loop will terminate.
+    <ul id="forloop">
+      <li class="left">
+        For loop -- Ruby
+        <xmp>
+          for i in 0..5
+            puts "We are on number: #{i}"
+          end
+        </xmp>
+      </li>
+      <li class="right">
+        For loop -- JavaScript
+        <xmp>
+          for (i = 0; i < 5; i++) {
+            console.log("We are on number: " + i);
+          }
+        </xmp>
+      </li>
+    </ul>
+    <ul id="eachloop">
+      <li class="left">
+        Each method -- Ruby
+        <xmp>
+          fruits = ["apples", "oranges", "blueberries", "bananas"]
+
+          fruits.each do |fruit|
+            puts "#{fruit} are a fruit."
+          end
+        </xmp>
+      </li>
+      <li class="right">
+        forEach function -- JavaScript
+        <xmp>
+          fruits = ["apples", "oranges", "blueberries", "bananas"];
+
+          function printFruits(fruit) {
+            console.log(fruit + " are a fruit");
+          }
+
+          fruits.forEach(printFruits);
+        </xmp>
+      </li>
+    </ul>
+    <ul id="whileloop">
+      <li class="left">
+        While loop -- Ruby
+        <xmp>
+          count = 10
+          while count >= 0
+            puts count
+            count -= 1
+          end
+        </xmp>
+      </li>
+      <li class="right">
+        While loop -- JavaScript
+        <xmp>
+          var count = 10
+          while (count >= 0) {
+            console.log(count);
+            count--;
+          }
+        </xmp>
+      </li>
+    </ul>
+    </div>
+  </section>
+
+
+
+</body>
+</html>
